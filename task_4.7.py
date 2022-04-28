@@ -10,8 +10,10 @@
 from math import factorial
 
 def fact_gen(n: int):
-    for n in range(1, n + 1):
-        yield factorial(el)
+    for i in range(1, n + 1):
+        yield factorial(i)
+
+
 
 if __name__ == '__main__':
     fact = input("Enter the number of factorials: ")
@@ -22,8 +24,8 @@ if __name__ == '__main__':
         print(b)
         exit(1)
 
-    for elt in fact(value):
-        print(el)
+    for elt in fact_gen(value):
+        print(elt)
 
 
 
