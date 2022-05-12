@@ -12,10 +12,37 @@ __init__()), который должен принимать данные (спи
 строки первой матрицы складываем с первым элементом первой строки второй матрицы и т.д.
 """
 
-class Marix:
+class Matrix:
     def __init__(self, list_1, list_2):
         self.list_1 = list_1
         self.list_2 = list_2
 
-print("Hi")
+    def __str__(self):
+        return str('\n'.join(['\t'.join([str(b) for b in n ]) for n in mtrx]))
+
+    def __add__(self):
+        mtrx: ([[0, 0, 0],
+               [0, 0, 0],
+               [0, 0, 0]])
+        for n in range(len(self.list_1)):
+            for b in range(len(self.list.list_2[n])):
+                mtrx[n][b] = self.list_1[n][b] + self.list_2[n][b]
+        return str('\n'.join(['\t'.join([str(b) for b in n]) for n in mtrx]))
+
+
+    my_Neo = Matrix([[31, 37, 51 ],
+                     [22, 43, 86]],
+                     [[3, 2, -1],
+                      [5, 4, 64],
+                      [32, 6, -8]])
+
+
+    print(my_Neo.__add__())
+
+
+
+
+
+
+
 
