@@ -12,15 +12,15 @@ __init__()), который должен принимать данные (спи
 строки первой матрицы складываем с первым элементом первой строки второй матрицы и т.д.
 """
 
-class Matrix:
-    def __init__(self, list_1, list_2):
-        self.list_1 = list_1
-        self.list_2 = list_2
+
+class Matrix(object):
+    def __init__(self, mtrx):
+        self.mtrx = [list_1, list_2]
 
     def __str__(self):
         return str('\n'.join(['\t'.join([str(b) for b in n ]) for n in mtrx]))
 
-    def __add__(self):
+    def __add__(self, other):
         mtrx: ([[0, 0, 0],
                [0, 0, 0],
                [0, 0, 0]])
