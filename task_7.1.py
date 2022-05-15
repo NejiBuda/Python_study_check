@@ -30,14 +30,13 @@ class Matrix(object):
         return str('\n'.join(['\t'.join([str(b) for b in n]) for n in mtrx]))
 
 
-    my_Neo = Matrix([[31, 37, 51 ],
-                     [22, 43, 86]],
-                     [[3, 2, -1],
-                      [5, 4, 64],
-                      [32, 6, -8]])
+my_Neo = Matrix([[31, 37, 51 ],
+                 [22, 43, 86],
+                 [5, 4, 64]])
 
 
-    print(my_Neo.__add__())
+
+print(my_Neo.__add__())
 
 
 
