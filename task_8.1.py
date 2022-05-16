@@ -13,11 +13,10 @@ class The_Data:
     @classmethod
     def extract(cls,time):
         my_time = []
-
         for n in time.split():
-            if n != '-' : time.extend(n) #append
+            if n != '-': my_time.append(n)
+        return int(my_time[0]), int(my_time[1]), int(my_time[2])
 
-        return int(time[0]), int(time[1]), int(time[2])
 
     @staticmethod
     def right(day, month, year):
@@ -37,6 +36,6 @@ Xronos = The_Data("16 - 05 - 2022")
 print(Xronos)
 print(The_Data.right(11, 11, 2022))
 print(Xronos.right(11 , 13, 2012))
-print(The_Data.extract("11 - 11 - 2011"))
-print(Xronos.extract("11 - 11 - 2020"))
-print(The_Data.right(1, 11, 2000))
+print(The_Data.extract("12 - 12 - 2012"))
+print(Xronos.extract("22 - 02 - 2022"))
+print(The_Data.right(10, 4, 2000))
